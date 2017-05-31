@@ -1,0 +1,53 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+header ul{
+	list-style: none;
+	padding-left: 0;
+	font-weight: 700;
+	background-color: #333;
+	padding: 10px 0;
+	font-size: 2em;
+	text-align: center;
+} 
+header ul li{
+	display: inline-block;
+	margin-right: 1.6em;
+}
+header ul li:last-child{
+	margin-right: 0;
+}
+header ul li a{
+	color: #6a6b6c;
+	transition: all 0.19s ease-out;
+}
+header ul li a:hover{
+	color: #eee;
+	text-decoration: none;
+}
+.pills{
+	display: inline-block;
+	min-height: 30px;
+	min-width: 80px;
+	padding: 2px 20px;
+	border-radius: 2px;
+	border: 2px solid ;
+	text-align: center;
+	margin-right: 1em;
+}
+.pills:hover{
+	text-decoration: none;
+}
+.pills::last-child{
+	margin-right: 0;
+}
+.h1{
+	margin: 1rem 0 1.2rem;
+}
