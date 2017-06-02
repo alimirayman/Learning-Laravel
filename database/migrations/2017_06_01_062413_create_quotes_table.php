@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNiceActionsTable extends Migration
+class CreateQuotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateNiceActionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('nice_actions', function (Blueprint $table) {
+        Schema::create('quotes', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('name');
-            $table->integer('niceness'); 
+            $table->text('quote');
+            $table->integer('author_id');
         });
     }
 
@@ -28,6 +28,6 @@ class CreateNiceActionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nice_actions');
+        Schema::dropIfExists('quotes');
     }
 }

@@ -11,20 +11,17 @@
 |
 */
 
-Route::get('/', [
-		'uses' => 'NiceActionController@getHome',
-		'as'   => 'home'
-	]);
+Route::get('/{author?}', [
+	'uses' => 'QuoteController@getIndex',
+	'as' => 'index'
+]);
 
-Route::group(['prefix'=>'do'], function(){
-	Route::get('/{action}/{name?}', [
-		'uses' => 'NiceActionController@getNiceAction',
-		'as'   => 'niceaction'
-	]);
+Route::post('/new', [
+	'uses' => 'QuoteController@postQuote',
+	'as'   => 'create'	
+]);
 
-	Route::post('/add_action', [
-		'uses' => 'NiceActionController@postAddNiceAction',
-		'as'   => 'add_action'
-	]);
-});
-
+Route::get('/delete/{quote_id}', [
+	'uses' => 'QuoteController@getDeleteQuote',
+	'as' => 'delete'
+]);
