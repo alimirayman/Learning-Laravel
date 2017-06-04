@@ -5,8 +5,7 @@
 @endsection
 
 @section('style')
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 @endsection
 
 @section('content')
@@ -92,6 +91,10 @@
 							<div class="form-group row">
 						    <label for="author" class="col-2 col-form-label">Author</label>
 						    <input type="text" class="form-control col-9" id="author" name="author" placeholder="Your Name">
+						  </div>
+						  <div class="form-group row">
+						    <label for="author" class="col-2 col-form-label">Email</label>
+						    <input type="email" class="form-control col-9" id="email" name="email" placeholder="Your Email">
 						  </div>
 							<div class="form-group row">
 						    <label for="quote" class="col-2 col-form-label">Quote</label>

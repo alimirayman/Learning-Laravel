@@ -25,3 +25,31 @@ Route::get('/delete/{quote_id}', [
 	'uses' => 'QuoteController@getDeleteQuote',
 	'as' => 'delete'
 ]);
+
+Route::get('/getmail/{author_name}', [
+	'uses' => 'QuoteController@getMailCallback',
+	'as' => 'mail_callback'
+]);
+
+Route::get('/admin/login', [
+	'uses' => 'AdminController@getLogin',
+	'as' => 'admin_login'
+]);
+
+Route::post('/admin/login', [
+	'uses' => 'AdminController@postLogin',
+	'as' => 'admin_login'
+]); 
+
+Route::group(['middleware'=> 'auth'], function($value='')
+{
+	Route::get('/admin/dashboard', [
+		'uses' => 'AdminController@getDashboard',
+		'as' => 'admin_dashboard'
+	]);
+});
+Route::get('/admin/logout', [
+	'uses' => 'AdminController@getLogout',
+	'middleware' => 'auth',
+	'as' => 'admin_logout'
+]);
